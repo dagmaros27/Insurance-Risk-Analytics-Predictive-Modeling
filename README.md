@@ -72,22 +72,14 @@ This project provides ACIS with a powerful analytical framework to:
 
 Our recommendations will detail specific plan features that can be modified or enhanced based on the insights gained from the A/B tests and predictive models. This strategic approach will enable ACIS to grow its client base and solidify its position as an innovative leader in the South African insurance market.
 
-## cloning the repository
-
-To clone the repository, use the following command:
-
-```bash
-git clone <repository-url>
-```
-
 ## Installation and Setup
 
 To set up the project environment, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/dagmaros27/Insurance-Risk-Analytics-Predictive-Modeling
+   cd Insurance-Risk-Analytics-Predictive-Modeling
    ```
 2. **Create a Virtual Environment:**
    ```bash
@@ -107,3 +99,51 @@ To set up the project environment, follow these steps:
 
 5. **Set Up Environment Variables:**
    Create a `.env` file in the root directory and add the necessary environment variables. For example:
+
+Here’s a section you can copy into your `README.md` under a new heading called **🔁 Reproducibility with DVC**:
+
+---
+
+6. Reproducibility with DVC
+
+To ensure our insurance risk analytics pipeline is fully reproducible and auditable, we use [Data Version Control (DVC)](https://dvc.org/) to track dataset versions.
+
+### 🔧 Prerequisites
+
+* Python ≥ 3.8
+* Git
+* DVC: Install using
+
+```bash
+pip install dvc
+```
+
+---
+
+### 📂 Directory Structure
+
+```
+project-root/
+├── data/
+│   └── insurance_data.csv       ← Tracked via DVC
+├── .dvc/
+├── .dvcignore
+├── data/insurance_data.csv.dvc  ← Metadata for dataset
+├── scripts/
+├── insurance_eda_analysis.ipynb
+├── requirements.txt
+├── README.md
+```
+
+---
+
+- **Pull the Dataset via DVC**
+
+```bash
+dvc pull
+```
+
+This command will fetch the latest version of `data/insurance_data.csv` from the configured remote DVC storage.
+
+---
+
