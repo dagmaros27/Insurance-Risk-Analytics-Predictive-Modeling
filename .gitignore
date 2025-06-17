@@ -1,4 +1,5 @@
 data
+!Data/*.dvc
 *.csv
 .ipynb_checkpoints
 
