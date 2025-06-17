@@ -47,8 +47,8 @@ def plot_time_series(df, time_col, value_cols):
 
 
 def analyze_vehicle_claims(df):
-    top = df.groupby(['Make', 'Model'])['TotalClaims'].mean().sort_values(ascending=False).head(10)
-    low = df.groupby(['Make', 'Model'])['TotalClaims'].mean().sort_values().head(10)
+    top = df.groupby(['make', 'Model'])['TotalClaims'].mean().sort_values(ascending=False).head(10)
+    low = df.groupby(['make', 'Model'])['TotalClaims'].mean().sort_values().head(10)
     return top, low
 
 
