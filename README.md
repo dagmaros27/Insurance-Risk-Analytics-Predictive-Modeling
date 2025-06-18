@@ -110,9 +110,9 @@ To ensure our insurance risk analytics pipeline is fully reproducible and audita
 
 ### 🔧 Prerequisites
 
-* Python ≥ 3.8
-* Git
-* DVC: Install using
+- Python ≥ 3.8
+- Git
+- DVC: Install using
 
 ```bash
 pip install dvc
@@ -147,3 +147,20 @@ This command will fetch the latest version of `data/insurance_data.csv` from the
 
 ---
 
+## 📊 New Analyses: Hypothesis Testing & Statistical Modeling
+
+### Hypothesis Testing
+
+- Conducted rigorous A/B hypothesis tests using [notebooks/hypotesis_testing.ipynb](notebooks/hypotesis_testing.ipynb).
+- Tested for statistically significant differences in risk and margin across provinces, zip codes, and genders.
+- Key finding: Policies in zip code 1619 have a significantly lower average margin than those in 1625 (p-value = 0.022), indicating regional profitability differences.
+- Visualized margin distributions by zip code to support business insights.
+
+### Statistical Modeling
+
+- Developed and evaluated predictive models in [notebooks/statistical_modeling.ipynb](notebooks/statistical_modeling.ipynb).
+- Used a Random Forest Regressor to predict total claims, with performance metrics such as RMSE and R² reported.
+- Interpreted model results using SHAP values to identify the most influential features in claim prediction.
+- Ensured reproducibility and modularity by leveraging scripts in the [`scripts/`](scripts/) directory.
+
+For detailed code, results, and visualizations, see the respective Jupyter notebooks in the [`notebooks/`](notebooks/) folder.
